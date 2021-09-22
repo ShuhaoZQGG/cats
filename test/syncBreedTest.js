@@ -18,4 +18,10 @@ describe('#breedDetails', () => {
     const balinese = breedDetails('Balinese');
     assert.equal(expectedDesc, balinese);
   });
+
+  it('provides, via callback, undefined for a breed that does not exist', () => {
+    const expectedDesc = undefined;
+    const saphire = breedDetails('saphire');
+    assert.equal(expectedDesc, saphire);
+  })
 });
